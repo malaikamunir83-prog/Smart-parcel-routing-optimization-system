@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Parcel - MyParcel</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🚚 MyParcel</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sendparcel.html">Send Parcel</a>
+      <a href="trackparcel.html">Track Parcel</a>
+      <a href="history.html">History</a>
+    </nav>
+  </header>
+
+  <main class="track-page">
+    <div class="track-wrapper">
+      <div class="form-container tracking-card">
+        <h2>📍 Live Tracking</h2>
+        <p class="subtitle">Enter your Parcel ID to see the moving delivery route</p>
+
+        <div class="track-input-group">
+          <input type="text" id="parcelId" placeholder="Enter Parcel ID (e.g. PKG-1234)">
+          <button id="trackButton" onclick="trackParcel()">Track & Animate</button>
+        </div>
+
+        <div id="map" style="height: 450px; width: 100%; border-radius: 15px; margin-top: 20px;"></div>
+
+        <div id="trackingStatus" style="margin-top: 15px; font-weight: bold; color: #4b0082; min-height: 20px;"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Smart Parcel Delivery. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

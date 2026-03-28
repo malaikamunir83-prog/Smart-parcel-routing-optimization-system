@@ -1,0 +1,307 @@
+/* =========================
+   1. GLOBAL RESET & THEME
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  /* Premium Animated Mesh Gradient */
+  background: linear-gradient(-45deg, #4b0082, #862977, #1d2671, #2575fc);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  background-attachment: fixed;
+  color: white;
+  padding-top: 80px; 
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   2. NAVBAR
+========================= */
+.navbar {
+  width: 100%;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(29, 38, 113, 0.8); /* Slightly more transparent */
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #d896ff;
+}
+
+/* =========================
+   3. HOME PAGE (INDEX)
+========================= */
+.hero {
+  min-height: calc(100vh - 80px); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 5%;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  background: linear-gradient(to right, #fff, #d896ff);
+  background-clip: text;            /* Standard property */
+  -webkit-background-clip: text;    /* Chrome, Safari, Edge */
+  -webkit-text-fill-color: transparent; 
+  color: transparent;               /* Fallback */
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.hero-image img {
+  max-width: 450px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  animation: floatTruck 6s ease-in-out infinite;
+}
+
+@keyframes floatTruck {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* =========================
+   4. FORM, TRACK & HISTORY (NO CONTAINER)
+========================= */
+.form-page, .track-page, .history-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.form-wrapper, .track-wrapper, .history-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-wrapper { max-width: 600px; }
+.track-wrapper, .history-wrapper { max-width: 1100px; }
+
+/* The white box is now removed and replaced with a light glass effect */
+.form-container, .container-card {
+  background: rgba(255, 255, 255, 0.05); /* Transparent */
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white; /* Text is now white */
+  text-align: center;
+  width: 100%;
+}
+
+.form-container h2, .container-card h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   5. INPUTS & GLASS BUTTONS
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.1); /* Darker transparent input */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #d896ff;
+}
+
+button, .btn {
+  padding: 16px 28px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(106, 17, 203, 0.4);
+  border-color: transparent;
+}
+
+/* =========================
+   6. TABLES & MAP
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.05); /* Glass Table */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th, td {
+  padding: 18px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #d896ff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+td {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.status-delivered { 
+  color: #2ecc71; 
+  background: rgba(46, 204, 113, 0.15); 
+  padding: 4px 12px; 
+  border-radius: 20px; 
+}
+
+.status-pending { 
+  color: #f39c12; 
+  background: rgba(243, 156, 18, 0.15); 
+  padding: 4px 12px; 
+  border-radius: 20px; 
+}
+
+#map {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   8. RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .hero-inner { flex-direction: column; text-align: center; }
+  .hero-text h1 { font-size: 2.8rem; }
+  .hero-btns { justify-content: center; }
+  .hero-image img { max-width: 320px; }
+  .form-container, .container-card { padding: 20px; }
+}
+/* 1. Set up the body to be a flex container */
+body.history-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Takes up full screen height */
+    margin: 0;
+}
+
+/* 2. Push the footer down */
+.history-wrapper {
+    flex: 1; /* This expands to fill all available space */
+    padding-top: 110px; /* Increased this to ensure heading is fully visible */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent to match your theme */
+    width: 100%;
+}
+
+/* 4. Fix for long IDs (Optional but recommended) */
+#historyTable td {
+    word-break: break-all; /* Prevents long IDs from breaking the table layout */
+    padding: 12px;
+}

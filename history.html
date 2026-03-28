@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery History | MyParcel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body class="history-page">
+<header class="navbar">
+  <div class="logo">🚚 MyParcel</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sendparcel.html">Send Parcel</a>
+    <a href="trackparcel.html">Track Parcel</a>
+    <a href="history.html">History</a>
+  </nav>
+</header>
+
+<main class="history-wrapper">
+    <h2 style="margin-top: 80px; margin-bottom: 20px; text-align: center;">
+    📦 Delivery History
+</h2>
+    
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>ID (Short)</th>
+                <th>Sender</th>
+                <th>Phone</th>
+                <th>Pickup</th>
+                <th>Delivery</th>
+                <th>Weight</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="parcelTableBody">
+            </tbody>
+    </table>
+</main>
+
+<footer>
+    © 2025 Smart Parcel Delivery. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // Simple entry animation for the table
+    gsap.from("#historyTable", { duration: 1, opacity: 0, y: 30, ease: "power2.out" });
+</script>
+</body>
+</html>

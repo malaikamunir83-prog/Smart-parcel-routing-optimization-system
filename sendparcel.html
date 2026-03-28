@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Send a Parcel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="form-page">
+<header class="navbar">
+  <div class="logo">🚚 MyParcel</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sendparcel.html">Send Parcel</a>
+    <a href="trackparcel.html">Track Parcel</a>
+    <a href="history.html">History</a>
+  </nav>
+</header>
+
+<main class="form-page">
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h2>📦 Send a Parcel</h2>
+            <form id="parcelForm">
+                <input type="text" id="senderName" placeholder="Your Name" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="pickupAddress" placeholder="Pickup Address" required>
+                <input type="text" id="deliveryAddress" placeholder="Delivery Address" required>
+                <input type="number" id="weight" placeholder="Weight (kg)" step="0.1" required>
+                
+                <button type="submit" class="btn">Send Parcel</button>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+
+<script src="script.js"></script>
+</body>
+</html>

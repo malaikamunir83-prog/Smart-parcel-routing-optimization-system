@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="gsap.min.js"></script>
+</head>
+<header class="navbar">
+  <div class="logo">🚚 MyParcel</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sendparcel.html">Send Parcel</a>
+    <a href="trackparcel.html">Track Parcel</a>
+    <a href="history.html">History</a>
+  </nav>
+</header>
+<body>
+<h1>Welcome to Parcel Routing App</h1>
+<div class="options">
+    <button onclick="window.location.href='sendParcel.html'">Send Parcel</button>
+    <button onclick="window.location.href='trackParcel.html'">Track Parcel</button>
+    <button onclick="window.location.href='history.html'">Delivery History</button>
+</div>
+
+<script>
+    gsap.from("h1", {duration: 1.5, opacity: 0, y: -30});
+    gsap.from(".options button", {duration: 1, opacity: 0, stagger: 0.3, x: -50});
+</script>
+</body>
+</html>
